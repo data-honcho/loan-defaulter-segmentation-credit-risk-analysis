@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Environment variables and credentials
+.env
+.env.*
+
+# Temporary files
+*.log
+.DS_Store
+Thumbs.db
+
+# Large datasets - keep locally
+data/application_data.csv
+data/previous_application.csv
+
+# Secrets
+.env
