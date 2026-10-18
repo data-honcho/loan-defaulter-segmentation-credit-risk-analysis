@@ -1,218 +1,210 @@
-
 # Loan Defaulter Segmentation & Credit Risk Analysis
 
 ## Project Overview
 
-This project explores loan default patterns to understand the borrower characteristics and financial factors associated with repayment difficulties. Using Python and exploratory data analysis (EDA), the analysis examines loan application data to identify patterns across demographic, financial, employment, and historical application attributes.
+This project explores loan application data to identify borrower characteristics and patterns associated with loan default. Using exploratory data analysis (EDA), data cleaning, and segmentation techniques, the analysis examines demographic, financial, employment, and previous application attributes to uncover insights that can support credit risk assessment and lending decisions.
 
-The objective is to generate actionable insights that can support credit risk assessment, borrower segmentation, and more informed lending decisions.
+The goal is to understand which borrower segments may present higher credit risk and how data-driven insights can help financial institutions improve lending strategies.
 
 ## Business Problem
 
-Loan defaults expose financial institutions to credit losses and can affect the sustainability of lending operations. Understanding the characteristics associated with repayment difficulties can help lenders evaluate their lending portfolios and identify borrower segments that may require closer risk assessment.
+Financial institutions need to assess the likelihood that borrowers will repay their loans. Poor risk assessment can increase default rates, financial losses, and operational costs.
 
-**Key Business Question:**
-
-What borrower characteristics and loan-related factors are associated with a higher likelihood of loan default, and how can these patterns inform credit risk management?
+This project investigates borrower characteristics and application patterns to identify potential indicators of default and support more informed credit risk management.
 
 ## Project Objectives
 
-- Analyse borrower characteristics and identify patterns associated with loan default.
-- Compare borrowers who experienced repayment difficulties with those who did not.
-- Examine relationships between income, credit amounts, employment, demographics, and repayment outcomes.
-- Investigate historical loan application information for additional credit risk insights.
-- Use data visualizations to communicate patterns and support business decision-making.
-- Develop data-driven recommendations for credit risk assessment and lending strategy.
+- Explore borrower demographics, financial information, and employment characteristics.
+- Compare repayers and defaulters using relevant borrower attributes.
+- Examine missing values, data quality issues, and outliers.
+- Segment applicants to identify groups with different default rates.
+- Calculate applicant counts and default rates across relevant categories.
+- Generate actionable insights to support credit risk assessment and lending decisions.
 
-## Tools & Technologies
+## Tools and Technologies
 
 | Tool | Purpose |
 |---|---|
-| Python | Data analysis and transformation |
-| Pandas | Data manipulation and analysis |
-| NumPy | Numerical operations |
+| Python | Data analysis and processing |
+| Pandas | Data manipulation and cleaning |
+| NumPy | Numerical computations |
 | Matplotlib | Data visualization |
 | Seaborn | Statistical visualization |
-| Jupyter Notebook | Interactive analysis and documentation |
+| Jupyter Notebook | Exploratory analysis and documentation |
+| Git and GitHub | Version control and project hosting |
 
-## Dataset
+## Dataset Description
 
-The analysis uses loan application data covering current and previous applications.
+The analysis uses the following datasets:
 
-The datasets provide information about borrower demographics, income, employment, credit amounts, loan application characteristics, and repayment outcomes.
+- **`application_data.csv`** — Contains applicant information, including demographic, financial, employment, and loan repayment status attributes.
+- **`previous_application.csv`** — Contains information about applicants' previous loan applications.
+- **`columns_description.csv`** — Provides descriptions of dataset columns.
 
-The analysis examines the available variables to understand their distributions, relationships, and potential relevance to credit risk.
+### Dataset Availability
 
-*Note: Refer to the notebook and the original dataset source for the exact dataset name, record counts, and variable definitions.*
+The two main datasets, `application_data.csv` and `previous_application.csv`, are not included in this GitHub repository because each file exceeds GitHub's standard 100 MiB limit for individual files.
 
-## Methodology
+The datasets remain available locally on the project owner's computer and are excluded from version control through `.gitignore`. The `columns_description.csv` file is included in the repository.
 
-### 1. Data Loading and Understanding
+To reproduce the analysis, obtain the original datasets from their source and place them in the project's `data/` directory. The main CSV files must retain the filenames expected by the notebook.
 
-- Imported the datasets into Python.
-- Examined dataset dimensions, column names, data types, and summary statistics.
-- Identified relevant variables for the analysis.
-
-### 2. Data Cleaning and Preparation
-
-- Investigated missing values and data quality issues.
-- Handled missing observations where appropriate.
-- Reviewed data types and inconsistent values.
-- Examined outliers and prepared variables for analysis.
-
-### 3. Exploratory Data Analysis (EDA)
-
-- Analysed the distribution of borrower characteristics.
-- Compared repayment outcomes across selected demographic and financial variables.
-- Investigated relationships between income, credit amounts, employment, and other loan-related attributes.
-- Examined historical application information to identify additional patterns.
-
-### 4. Segmentation and Visualization
-
-- Compared borrower groups based on selected characteristics.
-- Used charts and statistical visualizations to explore differences in observed default patterns.
-- Examined relationships between variables to identify potentially relevant credit risk indicators.
-
-### 5. Business Insights and Recommendations
-
-- Interpreted observed patterns in the context of credit risk management.
-- Identified borrower characteristics and segments that warrant further investigation.
-- Considered how the findings could support risk assessment, lending policy reviews, and portfolio monitoring.
-
-## Key Areas of Analysis
-
-- **Demographic characteristics:** Age, gender, marital status, and education.
-- **Financial characteristics:** Income, credit amount, annuity, and goods price.
-- **Employment characteristics:** Employment history and occupation.
-- **Credit application history:** Previous applications and associated outcomes.
-- **Repayment behaviour:** Differences between borrowers with and without recorded repayment difficulties.
-- **Risk segmentation:** Comparisons of observed default patterns across borrower groups.
-
-## Key Findings
-
-The exploratory analysis investigates several patterns relevant to credit risk:
-
-- **Employment history:** Examines how employment duration relates to observed repayment difficulties.
-- **Income and credit exposure:** Explores relationships between borrowers' income, requested credit amounts, and repayment outcomes.
-- **Demographic patterns:** Compares default outcomes across age groups and other demographic characteristics.
-- **Previous applications:** Investigates historical application information for additional insights into borrower behaviour.
-- **Borrower segments:** Examines differences in observed default patterns across selected borrower groups.
-
-*Specific numerical results and conclusions should be added after verifying the completed notebook outputs.*
-
-## Business Value
-
-The analysis demonstrates how exploratory data analysis can help financial institutions:
-
-- Understand patterns associated with loan default.
-- Identify borrower segments that may require additional risk assessment.
-- Improve visibility into the characteristics of their loan applicant population.
-- Support evidence-based credit risk monitoring and lending policy reviews.
-- Identify opportunities for further analysis and predictive modelling.
-
-The findings are intended to support risk assessment rather than serve as a standalone basis for approving or rejecting individual loan applicants.
+**Note:** Add the original dataset source link here once verified.
 
 ## Project Structure
 
 ```text
-Loan Defaulter Segmentation & Credit Risk Analysis/
-│
-├── notebooks/
-│   └── loan-defaulter_segmentation_analysis.ipynb
-│
+loan-defaulter-segmentation-credit-risk-analysis/
 ├── data/
-│   └── README.md
-│
-├── visualizations/
-│
-├── README.md
-├── requirements.txt
-└── .gitignore
+│   └── columns_description.csv
+├── images/
+│   └── repayer vs defaulter.png
+├── notebook/
+│   └── loan-defaulter_segmentation_analysis_data_honcho_up.ipynb
+├── .gitignore
+└── README.md
 ```
 
-*Update the folder and file names to match the actual repository structure.*
+## Methodology
+
+### 1. Data Loading and Exploration
+- Load the application and previous application datasets.
+- Inspect dataset dimensions, column names, and data types.
+- Review summary statistics and the distribution of key variables.
+
+### 2. Data Cleaning and Preparation
+- Identify missing values and assess their potential impact.
+- Investigate outliers and determine appropriate handling methods.
+- Remove or retain columns based on their relevance to the analysis, documenting the reasons.
+- Prepare variables for meaningful comparisons and segmentation.
+
+### 3. Exploratory Data Analysis
+- Examine applicant demographics, financial characteristics, and employment attributes.
+- Compare repayers and defaulters across relevant categories.
+- Explore relationships between applicant characteristics and the target variable.
+
+### 4. Credit Risk Segmentation
+- Group applicants according to selected characteristics.
+- Calculate the number of applicants in each group.
+- Calculate the percentage of applicants with `TARGET = 1`, representing loan default.
+- Compare segment-level default rates while considering group sizes.
+
+### 5. Previous Application Analysis
+- Examine historical application information where relevant.
+- Review the relationship between the application and previous application datasets.
+- Account for multiple previous applications per applicant to avoid unintentionally counting repeat applications as separate borrowers.
+
+## Key Areas of Analysis
+
+- Borrower demographic characteristics
+- Employment and income patterns
+- Financial and credit-related attributes
+- Repayer versus defaulter comparisons
+- Applicant segmentation and default rates
+- Previous loan application patterns
+- Data quality, missing values, and outlier assessment
+
+## Key Findings
+
+The notebook contains the exploratory analysis and visualizations used to investigate potential patterns associated with loan default.
+
+The final findings should highlight the strongest evidence from the analysis, including:
+
+- Applicant segments with relatively higher or lower default rates.
+- The number of applicants represented in each segment.
+- Relationships between selected borrower characteristics and default outcomes.
+- Patterns that may inform further credit risk investigation.
+
+*Specific numerical findings should be added after verifying the results in the notebook.*
+
+## Business Value
+
+The analysis demonstrates how data analytics can help financial institutions:
+
+- Identify borrower segments that may require closer risk assessment.
+- Compare default rates across applicant groups.
+- Improve the interpretation of borrower and application data.
+- Support evidence-based lending policies and credit risk monitoring.
+- Develop more focused strategies for managing potential loan defaults.
+
+The results are exploratory and should not be treated as a production-ready credit scoring model or as proof that any single characteristic causes loan default.
+
+## Limitations
+
+- The main datasets are not hosted in this repository because of GitHub file-size restrictions.
+- Findings depend on the quality, completeness, and representativeness of the underlying data.
+- Exploratory associations do not establish causation.
+- Further statistical testing and model validation would be required before using the findings for actual lending decisions.
+
+## Future Improvements
+
+- Add a reproducible environment file such as `requirements.txt`.
+- Improve configurable file paths and document the notebook's execution requirements.
+- Expand the analysis of applicant counts and default rates across segments.
+- Strengthen the treatment of missing values and outliers with documented justifications.
+- Review data joins and aggregation logic to ensure that repeat applications do not distort borrower-level results.
+- Develop an interactive Power BI dashboard for credit risk monitoring.
+- Explore predictive modeling with appropriate validation and performance metrics.
 
 ## How to Run the Project
-
-### Prerequisites
-
-- Python 3.9 or later
-- Jupyter Notebook
-- Required dataset files
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/data-honcho/Loan_Defaulter_Segmentation_Analysis-and-Visualization.git
+git clone https://github.com/data-honcho/loan-defaulter-segmentation-credit-risk-analysis.git
 ```
 
 ### 2. Navigate to the Project Directory
 
 ```bash
-cd Loan_Defaulter_Segmentation_Analysis-and-Visualization
+cd loan-defaulter-segmentation-credit-risk-analysis
 ```
 
-### 3. Create a Virtual Environment
+### 3. Obtain the Required Datasets
 
-```bash
-python -m venv .venv
+Place the following files in the `data/` directory:
+
+```text
+data/
+├── application_data.csv
+├── previous_application.csv
+└── columns_description.csv
 ```
 
-Activate the environment on Windows:
+The first two files must be obtained separately from the original dataset source.
 
-```bash
-.venv\Scripts\activate
-```
+### 4. Install the Required Libraries
 
-### 4. Install Dependencies
-
-If a `requirements.txt` file is available:
-
-```bash
-pip install -r requirements.txt
-```
-
-Alternatively, install the core libraries:
+Install the libraries used by the notebook, if they are not already installed:
 
 ```bash
 pip install pandas numpy matplotlib seaborn jupyter
 ```
 
-### 5. Configure the Dataset
+Additional dependencies may be required depending on the notebook's imports.
 
-Place the required dataset files in the appropriate directory and update the notebook's file paths if necessary.
+### 5. Open the Notebook
 
-Large raw datasets should be excluded from Git when licensing, size, or privacy considerations make redistribution inappropriate.
-
-### 6. Launch Jupyter Notebook
+Launch Jupyter Notebook:
 
 ```bash
 jupyter notebook
 ```
 
-Open the project notebook and run the cells sequentially.
+Open:
 
-## Limitations
+`notebook/loan-defaulter_segmentation_analysis_data_honcho_up.ipynb`
 
-- The analysis identifies associations and patterns; it does not establish causal relationships.
-- Findings depend on the quality, completeness, and representativeness of the available data.
-- Observed differences between borrower groups should be validated before informing lending policies.
-- The project focuses on exploratory analysis and visualization rather than a deployed loan default prediction model.
+Run the notebook cells in sequence after confirming that the dataset paths match your local directory structure.
 
-## Future Improvements
+## Author
 
-- Develop an interactive credit risk dashboard using Power BI.
-- Create additional borrower risk segments using appropriate segmentation techniques.
-- Build and evaluate machine learning models for loan default prediction.
-- Establish key performance indicators for monitoring default rates and credit exposure.
-- Improve reproducibility through modular Python scripts, documented dependencies, and automated data validation.
+**David Azorji**
 
-## Conclusion
+Data Analytics | Exploratory Data Analysis | Credit Risk Analysis
 
-This project demonstrates the application of Python-based data analytics to loan default analysis and credit risk assessment. By exploring borrower characteristics, financial attributes, and historical application information, the analysis seeks to uncover patterns that can help financial institutions better understand repayment difficulties and make more informed, data-driven lending decisions.
+GitHub: [data-honcho](https://github.com/data-honcho)
 
----
+## Disclaimer
 
-**Project Focus:** Data Analytics | Exploratory Data Analysis | Credit Risk Analysis | Borrower Segmentation | Data Visualization
-
-**Tools:** Python, Pandas, NumPy, Matplotlib, Seaborn, Jupyter Notebook
+This project is intended for educational and portfolio demonstration purposes. Its findings are exploratory and should not be used as the sole basis for real-world credit approval or lending decisions.
