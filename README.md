@@ -146,6 +146,13 @@ The results are exploratory and should not be treated as a production-ready cred
 - Develop an interactive Power BI dashboard for credit risk monitoring.
 - Explore predictive modeling with appropriate validation and performance metrics.
 
+## 📸 Dashboard Preview
+
+![repayment status](1%20repayment%20status.PNG)
+![realty vs no realty](1%20realty.PNG)
+![age range](1%20age.PNG)
+
+
 ## How to Run the Project
 
 ### 1. Clone the Repository
