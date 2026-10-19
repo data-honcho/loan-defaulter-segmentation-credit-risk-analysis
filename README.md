@@ -148,9 +148,14 @@ The results are exploratory and should not be treated as a production-ready cred
 
 ## 📸 Dashboard Preview
 
-![repayment status](1%20repayment%20status.PNG)
-![realty vs no realty](1%20realty.PNG)
-![age range](1%20age.PNG)
+### Repayment Status
+![Repayment Status](./repayment%20status.PNG)
+
+### Realty vs. No Realty
+![Realty vs. No Realty](./realty.PNG)
+
+### Age Range
+![Age Range](./age.PNG)
 
 
 ## How to Run the Project
